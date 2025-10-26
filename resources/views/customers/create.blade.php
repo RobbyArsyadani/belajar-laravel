@@ -16,7 +16,7 @@
 
     <form action="{{ route('customers.store') }}" method="POST">
         @csrf
-        <label>Name:</label>
+        <label>Name blablabla:</label>
         <input type="text" name="name"><br><br>
 
         <label>Description:</label><br>
