@@ -1,11 +1,18 @@
-* text=auto eol=lf
+# --- GitHub Linguist configuration ---
+# Tandai file PHP sebagai bahasa utama
+*.php linguist-detectable=true
 
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+# Abaikan file JS, TS, CSS, dan Vue agar tidak dihitung
+*.js linguist-detectable=false
+*.ts linguist-detectable=false
+*.vue linguist-detectable=false
+*.css linguist-detectable=false
+*.json linguist-detectable=false
 
-CHANGELOG.md export-ignore
-README.md export-ignore
-.github/workflows/browser-tests.yml export-ignore
+# Folder yang dianggap sebagai file vendor / build hasil compile
+/vendor/* linguist-vendored
+/node_modules/* linguist-vendored
+/public/js/* linguist-vendored
+/public/css/* linguist-vendored
+/public/build/* linguist-vendored
+/resources/js/* linguist-vendored
